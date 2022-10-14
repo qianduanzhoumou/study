@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "jsx": "react",
+        "esModuleInterop": true //ES 模块互操作
+    },
+    "exclude": ["node_modules"]
+}

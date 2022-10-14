@@ -13,5 +13,14 @@
 /// <reference types="react-scripts" />
 
 declare module "\*.module.less"
-以及让 create-react-app 自动支持 css-loader 的方法：
-安装 craco-css-modules 在 craco.config.js 中配置 详细可看包的文档
+以及让 **create-react-app** 自动支持 **css-loader** 的方法：
+安装 **craco-css-modules** 在 **craco.config.js** 中配置 详细可看包的文档
+
+# 在 C-R-A 中 使用配置式路由，需要安装 react-router-config 这个包，最优解决方案是第三点
+
+注意事项：在使用配置是路由时，react-router-config 和 react-router-dom 包的版本不能超过 6.0.0，否则会报错
+
+解决方案:
+1 卸载新版本，再安装 5 的版本
+2 将所有 Switch 改为 Routes，Redirect 改为 Navigate ，withRouter 改为 useNavigate
+3 在最新的 **react-router6.4** 版本中通过 **const router= createBrowserRouter(注入路由文件)** 在到 render 之中通过 **<RouterProvider router={router} />** API，完成配置
